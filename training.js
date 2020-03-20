@@ -1,39 +1,42 @@
 
-    function question(question, answers,correct)
-    {
-        this.question = question
-        this.answers = answers 
-        this.correct = correct
+function question(question, answers, correct) {
+    this.question = question
+    this.answers = answers
+    this.correct = correct
+}
+
+question.prototype.typeQuestion = function () {
+    var suggestions = "";
+    for (var i = 0; i < this.answers.length; i++) {
+        suggestions += `${i + 1} : ${this.answers[i]}\n`;
     }
+    return suggestions;
+}
 
-     var q1 = new question ('is javascrpt the best'+
-     ' language in the world', ['yes','no'],0)
-     
-     var q2 = new question ('what is the name of this game\'s coder', ['jhon','jane','mohammed'],2)
+question.prototype.checkAnswer = function (response) {
+    document.write(response == this.correct ? 'hey' : 'you are wrong');
+}
 
-     var q3 = new question ('this game was ccreated by ', ['js','html','css'],0)
+question.prototype.toText = function () {
+    return `${this.question} : \n -------\n${this.typeQuestion()}`;
+}
 
+//creating questions
+var q1 = new question('is javascrpt the best language in the world', ['yes', 'no'], 0)
+var q2 = new question('what is the name of this game\'s coder', ['jhon', 'jane', 'mohammed'], 2)
+var q3 = new question('this game was ccreated by ', ['js', 'html', 'css'], 0)
 
-    var Quz = [q1,q2,q3] 
-    n = Math.floor(Math.random()*3)
-    
-    
-    question.prototype.typeQuestion = function() {
-        console.log(this.question)
-        for (var i=0 ; i < this.answers.length ; i++ ){
-            console.log(i +' : ' + this.answers[i] )
-        }
+//creating a quiz
+var Quz = [q1, q2, q3];
 
-    }
-    answer = prompt('whats your answer')
+//genrating a random question
+n = Math.floor(Math.random() * 3);
+var question = Quz[n];
 
-    question.prototype.CheckAnswer = function() {
-        if (answer === this.correct) { document.write('hey') }
-        else {document.write('you are wrong')} 
-    }
+//showing question to the user throw a prompt
+//and getting input
+var answer = parseInt(prompt(question.toText()));
 
-    Quz[n].typeQuestion() 
-
-        answer = parseInt(prompt('whats your answer'))
-    Quz[n].CheckAnswer()
+//showing result
+question.checkAnswer(answer - 1);
 
