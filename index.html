@@ -12,6 +12,7 @@
 
             body{
                 display: flex;
+                background-color: black;
             }
 
             #correct, #wrong{
@@ -29,11 +30,13 @@
                 color: #e74c3c;
             }
 
+
+
             .texto {
                 width: 600px;
-                color: black;
+                color: white;
                 font-size: 18px;
-                border: 1px solid black;
+                border: 1px solid white;
                 padding: 11px;
                 box-shadow: 10px 10px 5px grey;
             }
@@ -48,10 +51,11 @@
         <div id="correct">
 
 
-           <img src="alphabit.png" alt="">
+           <img src="alphabit.png" alt="" style="width: 40px;">
             Congrats, your answer is correct  
 
-            <h5 style="color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> this is the challenges section </h5>
+            <h5 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> That was easy , what about this 
+            : </h5>
              <div class="texto">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
@@ -60,7 +64,7 @@
         </div>
 
         <div id="wrong">
-           
+            <img src="alphabit.png" alt="" style="width: 40px;">
             Unfortunately, your answer is wrong
             <br/>
             <Button onclick="location.reload()">

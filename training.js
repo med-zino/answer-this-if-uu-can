@@ -30,7 +30,7 @@ question.prototype.toText = function () {
 var q1 = new question('when was alphabit created', ['2016', '2015'], 0)
 var q2 = new question('what is the name of our ex presedent', ['moncef', 'azziz', 'oussama'], 2)
 var q3 = new question('what is our slogan ', ['raise the bar higher', 'keep the bar higher', 'we are alphabit'], 0)
-var q4 = new question('how many departements do we have', ['4', '3'], 1)
+var q4 = new question('how many departements do we have', ['4 departements', '3 departements'], 1)
 
 
 //creating a quiz
