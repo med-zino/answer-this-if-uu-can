@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <title>Document</title>
         <style>
             html, body{
@@ -48,15 +49,15 @@
 
         
 
-        <div id="correct">
+        <div id="correct" >
 
 
-           <img src="alphabit.png" alt="" style="width: 40px;">
+           <img src="alphabit.png" alt="" style="width: 40px;"  data-aos="fade-right">
             Congrats, your answer is correct  
 
-            <h5 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> That was easy , what about this 
+            <h5 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"  data-aos="fade-left"> That was easy , what about this 
             : </h5>
-             <div class="texto">
+             <div class="texto"  data-aos="fade-up">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
 
 
@@ -64,15 +65,23 @@
         </div>
 
         <div id="wrong">
-            <img src="alphabit.png" alt="" style="width: 40px;">
+            <img src="alphabit.png" alt="" style="width: 40px;"  data-aos="fade-right">
             Unfortunately, your answer is wrong
             <br/>
-            <Button onclick="location.reload()">
+            <Button onclick="location.reload()"  data-aos="fade-up">
                 Re-take the quiz
             </Button>
         </div>
    
         <script src="training.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                      duration: 3000,
+                    });
+    
+          AOS.init();
+        </script>
     </body>
 </html>
 
